@@ -1,0 +1,21 @@
+p, article ul {
+  margin: 0 0 1em 0;
+  max-width: $max_width-text;
+  line-height: 1.3
+}
+
+article {
+  position: relative;
+  margin: 0 auto;
+  max-width: $max_width-content;
+
+  ul {
+    padding-left: 1.5em
+  }
+}
+
+.key {
+  padding: .1em .4em;
+  border: 1px solid $color-text_secondary;
+  border-radius: 4px;
+}

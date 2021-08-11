@@ -1,0 +1,43 @@
+nav {
+  font-size: 1em;
+  text-transform: uppercase;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+
+    li {
+      margin-right: .5em;
+
+      &:last-child {
+        margin-right: 0
+      }
+
+      &.nav-active a {
+        color: $color-text;
+        font-family: $font_family-default;
+        font-weight: 500
+      }
+
+      a {
+        padding: .5em 1em;
+        color: $color-text_secondary;
+        border-radius: 1em + .7em * 2;
+        transition: all .2s ease-out;
+
+        &:hover {
+          color: $color-text;
+          background: lighten($color-text, 90%)
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $breakpoint-desktop) {
+  nav {
+    font-size: 1.2em
+  }
+}
