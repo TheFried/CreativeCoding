@@ -1,0 +1,53 @@
+header {
+  padding-top: var(--padding_content);
+  padding-bottom: calc(var(--padding_content) * 2);
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+
+  & > h1 {
+    margin: 0;
+    font-size: 1.5em;
+    font-weight: 500;
+
+    a {
+      color: $color-text_secondary;
+
+      &:hover {
+        color: $color-text
+      }
+    }
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+
+    h1 {
+      display: none
+    }
+  }
+}
+
+@media (min-width: $breakpoint-desktop) {
+  header {
+    .logo {
+      a:hover + h1 {
+        margin-left: 1em;
+        opacity: 1;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: 1.2em;
+        display: inherit;
+        opacity: 0;
+        transition: all .2s ease-out;
+        cursor: default;
+        user-select: none;
+        -webkit-user-select: none;
+        -moz-user-select: none
+      }
+    }
+  }
+}
